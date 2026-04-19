@@ -89,13 +89,42 @@ a:hover {
     text-decoration: underline;
 }
 
-
-
-
 footer {
     text-align: center;
     padding: 15px;
     color: white;
     font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin: 0;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
