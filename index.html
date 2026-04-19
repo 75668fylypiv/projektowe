@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volodymyr Fylypiv - CV</title>
 
-    <link rel="stylesheet" href="green.css">
+    <link id="theme-style" rel="stylesheet" href="green.css">
 </head>
 
 <body>
@@ -14,10 +14,10 @@
     <h1>Volodymyr Fylypiv</h1>
     <p class="subtitle">Student Informatyki • Future Developer</p>
     <div style="text-align:center; margin: 15px;">
-    <button onclick="changeTheme()">Zmień motyw</button>
+    <button id="themeBtn" onclick="changeTheme()">Zmień motyw</button>
     <button onclick="toggleProjects()">Ukryj/Pokaż projekty</button>
-</div>
     
+</div>
 </header>
 
 <main class="container">
@@ -87,7 +87,7 @@
     </section>
 
 
-    <section class="card">
+    <section class="card" id="projects">
         <h2>Projekty</h2>
         <ul>
             <li>Strona CV</li>
@@ -100,6 +100,27 @@
 </main>
 
 <footer>
+    <section class="card">
+    <h2>Formularz kontaktowy</h2>
+
+    <form id="contactForm">
+
+        <input type="text" id="name" placeholder="Imię">
+        <p class="error" id="nameError"></p>
+
+        <input type="text" id="surname" placeholder="Nazwisko">
+        <p class="error" id="surnameError"></p>
+
+        <input type="text" id="email" placeholder="Email">
+        <p class="error" id="emailError"></p>
+
+        <textarea id="message" placeholder="Wiadomość"></textarea>
+        <p class="error" id="messageError"></p>
+
+        <button type="submit">Wyślij</button>
+
+    </form>
+</section>
     <p>2026 Volodymyr Fylypiv 75668</p>
 
 </footer>
