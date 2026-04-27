@@ -79,3 +79,27 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     }
 
 });
+
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+
+        // Skills
+        const skillsList = document.getElementById("skillsList");
+        data.skills.forEach(skill => {
+            const li = document.createElement("li");
+            li.textContent = skill;
+            skillsList.appendChild(li);
+        });
+
+        // Projects
+        const projectsList = document.getElementById("projectsList");
+        data.projects.forEach(project => {
+            const li = document.createElement("li");
+            li.textContent = project;
+            projectsList.appendChild(li);
+        });
+
+    })
+    .catch(error => console.error("Błąd JSON:", error));
+
