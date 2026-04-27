@@ -13,7 +13,7 @@
 <header class="header">
     <h1>Volodymyr Fylypiv</h1>
     <p class="subtitle">Student Informatyki • Future Developer</p>
-    <div style="text-align:center; margin: 15px;">
+    <div class="buttons">
     <button id="themeBtn" onclick="changeTheme()">Zmień motyw</button>
     <button onclick="toggleProjects()">Ukryj/Pokaż projekty</button>
     
@@ -50,14 +50,7 @@
 
     <section class="card">
         <h2>Umiejętności</h2>
-        <ul class="skills">
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>C#</li>
-            <li>SQL</li>
-            <li>Python</li>
-        </ul>
-
+        <ul class="skills" id="skillsList"></ul>
     </section>
 
     <section class="card">
@@ -89,12 +82,7 @@
 
     <section class="card" id="projects">
         <h2>Projekty</h2>
-        <ul>
-            <li>Strona CV</li>
-            <li>Gra Snake w Pythonie</li>
-            <li>Kalkulator (aplikacja konsolowa)</li>
-
-        </ul>
+        <ul id="projectsList"></ul>
     </section>
 
 </main>
