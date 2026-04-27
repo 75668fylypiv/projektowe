@@ -128,3 +128,7 @@ button {
     border-radius: 8px;
 }
 
+.buttons {
+    text-align: center;
+    margin: 15px;
+}
