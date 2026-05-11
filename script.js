@@ -27,58 +27,7 @@ function toggleProjects() {
     }
 }
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
 
-    e.preventDefault();
-
-    let name = document.getElementById("name").value.trim();
-    let surname = document.getElementById("surname").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
-
-    let valid = true;
-
-    document.getElementById("nameError").textContent = "";
-    document.getElementById("surnameError").textContent = "";
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("messageError").textContent = "";
-
-    if (name === "") {
-        document.getElementById("nameError").textContent = "Podaj imię";
-        valid = false;
-    } else if (/\d/.test(name)) {
-        document.getElementById("nameError").textContent = "Imię nie może zawierać cyfr";
-        valid = false;
-    }
-
-    if (surname === "") {
-        document.getElementById("surnameError").textContent = "Podaj nazwisko";
-        valid = false;
-    } else if (/\d/.test(surname)) {
-        document.getElementById("surnameError").textContent = "Nazwisko nie może zawierać cyfr";
-        valid = false;
-    }
-
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (email === "") {
-        document.getElementById("emailError").textContent = "Podaj email";
-        valid = false;
-    } else if (!emailPattern.test(email)) {
-        document.getElementById("emailError").textContent = "Niepoprawny email";
-        valid = false;
-    }
-
-    if (message === "") {
-        document.getElementById("messageError").textContent = "Wpisz wiadomość";
-        valid = false;
-    }
-
-    if (valid) {
-        alert("Formularz wysłany poprawnie!");
-    }
-
-});
 
 fetch('data.json')
     .then(response => response.json())
